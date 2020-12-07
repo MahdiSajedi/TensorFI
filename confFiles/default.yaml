@@ -2,7 +2,7 @@
 # The fields here should correspond to the Fields in fiConfig.py
 
 # Deterministic fault seed for the injections
-Seed: 1000
+Seed: 10
 
 # Type of fault to be injected for Scalars and Tensors
 # Allowed values are: {None, Rand, Zero, Rand-element, bitFlip-element, bitFlip-tensor}
