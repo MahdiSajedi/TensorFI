@@ -2,7 +2,7 @@
 # The fields here should correspond to the Fields in fiConfig.py
 
 # Deterministic fault seed for the injections
-# Seed: 1000
+Seed: 1000
 
 # Type of fault to be injected for Scalars and Tensors
 # Allowed values are: {None, Rand, Zero, Rand-element, bitFlip-element, bitFlip-tensor}
@@ -13,7 +13,7 @@
 #   5) bitFlip-element - single bit-flip over one data item in the output of the target op
 #   6) bitFlip-tensor - single bit-flip over all data items in the output of the target op 
 ScalarFaultType: None
-TensorFaultType: bitFlip-element 
+TensorFaultType: Rand
 
 
 # Add the list of Operations and their probabilities here
@@ -24,9 +24,10 @@ TensorFaultType: bitFlip-element
 
 Ops:
 # Choose operations which you want to inject
-  - ALL = 1.0 # Chooses all operations
-#  - LRN = 1.0 # Choose one operation only; 
-# - EQUAL = 1.0
+ # - ALL = 1.0 # Chooses all operations
+   - NOOP = 1.0
+ #- LRN = 1.0 # Choose one operation only; 
+ #- EQUAL = 1.0
 #  - SOFT-MAX = 1.0
 # - DIV = 0.0 # This does not exist - and should be ignored (Test)
 # - SUB = -0.5 # This should raise an exception
@@ -44,7 +45,7 @@ Instances:
   - RELU = 3
   - BIASADD = 2
   - RESHAPE = 1
-  - ADD = 3
+  - ADD = 2
   - MATMUL = 3 
 
 
