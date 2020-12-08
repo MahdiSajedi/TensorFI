@@ -616,10 +616,10 @@ def injectFaultExpandDims(a, b):
 	if logReturn: logging.debug("\tReturning from ExpandDims " + str(res) )
 	return res
 
-def injectFaultPack(a, b):
+def injectFaultPack(a):
 	"Function to call injectFault on Pack"
 	# FIXME: Implement this functionality
-	logging.debug("Calling Operator Pack" + getArgs(a, b))
+	logging.debug("Calling Operator Pack" + getArgs(a))
 	# res = np.stack(a, b)
 	# FIXME: This throws an exception, so we dummied it out
 	res = a
