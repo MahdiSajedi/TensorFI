@@ -627,10 +627,10 @@ def injectFaultPack(a):
 	if logReturn: logging.debug("\tReturning " + str(res) )
 	return res
 
-def injectFaultConcatV2(a, b, c):
+def injectFaultConcatV2(a, b, c,d,e):
 	"Function to call injectFault on ConcatV2"
-	logging.debug("Calling Operator ConcatV2" + getArgs(a, b, c))
-	res = np.concatenate((a, b), c)
+	logging.debug("Calling Operator ConcatV2" + getArgs(a, b, c,d,e))
+	res = np.concatenate((a, c), e)
 	res = condPerturb(Ops.PACK, res)
 	if logReturn: logging.debug("\tReturning from Concat " + str(res) )
 	return res
